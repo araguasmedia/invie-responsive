@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta" rel="stylesheet">
+    <link rel="stylesheet" href="css/invie.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Precios de tus mejores guitarras</title>
+</head>
+<body>
+    <header id="header" class="header background">
+        <div class="contenedor">
+            <figure class="logotipo">
+                <img src="imagenes/invie.png" with="186" height="60" alt="Invie logotipo" />
+            </figure>
+            <span class="burger-button icon-menu" id="burguer-button"></span>
+            <nav class="menu">
+                <!-- menu -->
+                <ul>
+                    <li>
+                        <a href="index.html">home</a>
+                    </li>
+                    <li>
+                        <a href="index.html#guitarras">Guitarras</a>
+                    </li>
+                    <li>
+                        <a href="precios.html">Precios</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="tabla">
+        <div class="contenedor">
+            <table>
+                <thead>
+                <tbody>
+                    <tr>
+                        <th>Modelo</th>
+                        <th>Precio</th>
+                        <th>Descripción</th>
+                        <th>Modelo</th>
+                        <th>Precio</th>
+                        <th>Descripción</th>
+                    </tr>
+
+                </tbody>
+                <tr>
+                    <td>Invie classic</td>
+                    <td>$100000</td>
+                    <td>Una guitarra muy pro</td>
+                    <td>Invie classic</td>
+                    <td>$100000</td>
+                    <td>Una guitarra muy pro</td>
+                </tr>
+                <tr>
+                    <td>Invie classic</td>
+                    <td>$100000</td>
+                    <td>Una guitarra muy pro</td>
+                    <td>Invie classic</td>
+                    <td>$100000</td>
+                    <td>Una guitarra muy pro</td>
+                </tr>
+                <tr>
+                    <td>Invie classic</td>
+                    <td>$100000</td>
+                    <td>Una guitarra muy pro</td>
+                    <td>Invie classic</td>
+                    <td>$100000</td>
+                    <td>Una guitarra muy pro</td>
+                </tr>
+                </thead>
+            </table>
+        </div>
+
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="contacto">
+                <img src="imagenes/invie-white.png" alt="logotipo blanco" />
+                <a href="telf:+34302569879"><strong>Telefono</strong><span>302569879</span></a>
+                <a href="info@ccc.com"><strong>E-mail</strong><span>Contacto</span></a>
+            </div>
+            <form class="formulario">
+                <div class="col1">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" required id="nombre" name="nombre" />
+                    <label for="email">E-mail</label>
+                    <input type="email" required id="email" name="email" />
+                    <div class="sexo">
+                        <label for="mujer">
+                            <input type="radio" id="mujer" name="sexo" checked value="mujer" /> mujer
+                        </label>
+                        <label for="hombre">
+                            <input type="radio" id="hombre" name="sexo" value="hombre" /> hombre
+                        </label>
+                    </div>
+                    <div class="intereses">
+                        <label for="cotizacion">
+                            <input type="checkbox" id="cotizacion" checked name="cotizacion" value="cotizacion" />Cotizacion
+                        </label>
+                        <label for="reclamos">
+                            <input type="checkbox" id="reclamos" name="intereses" value="reclamos" />Reclamos
+                        </label>
+                        <div class="col2">
+                            <label for="comentarios">
+                                <input type="checkbox" id="comentarios" name="intereses" value="intereses" />Comentarios
+                            </label>
+                            <label for="otros">
+                                <input type="checkbox" id="otros" name="otros" value="otros" />Otros
+                            </label>
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="comentarios">Comentarios</label>
+                        <textarea name="" id="comentarios" cols="30" rows="5"></textarea>
+                        <input class="button" type="submit" value="Enviar" />
+                    </div>
+            </form>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.6.3/blazy.min.js">
+
+    </script>
+    <script>
+            var consulta = window.matchMedia('(max-width: 800px)');
+            consulta.addListener(mediaQuery);
+
+            var $burguerButton = document.getElementById('burguer-button');
+            var $menu = document.getElementById('menu');
+            function toggleMenu() {
+                $menu.classList.toggle('active')
+            };
+
+            function mediaQuery() {
+                if (consulta.matches) {
+                    console.log('se cumplio la condicion');
+
+                    $burguerButton.addEventListener('touchstart', toggleMenu);
+
+                    function toggleMenu() {
+                        $burguerButton.addEventListener('touchstart', toggleMenu);
+                        $menu.classList.toggle('active')
+                    };
+                } else {
+                    $burguerButton.removeEventListener('touchstart', toggleMenu);
+                    console.log('no se cumplio la condicion');
+                }
+            }
+            mediaQuery();
+
+            // lazy loading
+
+            var bLazy = new Blazy({
+               selector: 'img'
+            });
+
+            //$burguerButton.addEventListener('touchstart', toggleMenu);
+
+            //function toggleMenu() {
+            //    $menu.classList.toggle('active')
+            //};
+
+    </script>
+</body>
+</html>

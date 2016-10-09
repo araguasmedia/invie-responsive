@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Reto dos - Desarrollo web -Stiky footer</title>
+    <link rel="stylesheet" href="css/stikefooter.css" />
+</head>
+<body id="body">
+    <header id="header">
+        <h2>Header</h2>
+    </header>
+        <section id="contenido">
+            <h2>Contenedor</h2>
+            <p>Cloudant database-as-a-Service handles infrastructure, growth and management. Leaving you to get on with developing great apps. Joining Cloudant is easy: no restrictions, no credit card.</p>
+
+        </section>
+    <footer id="footer">
+        <h2>Footer</h2>
+    </footer>
+    <script>
+        var $contenido = document.getElementById('contenido');
+        var $footer = document.getElementById('footer');
+        var $header = document.getElementById('header');
+        var $bodyr = document.getElementById('doby');
+
+        var alto = $body.offsetHeight - ($footer.offsetHeight + $header.offsetHeight);
+        //console.log(alto);
+        $contenido.style.minHeight = alto + "px";
+    </script>
+
+</body>
+</html>
